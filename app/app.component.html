@@ -1,0 +1,112 @@
+<div class="top"></div>
+<div class="header">
+  <div style="float: right; padding: 0.75em 0em;">
+    <button icon="save" kendoButton style="font-weight: bold;">Scan</button>
+    <button icon="check" kendoButton style="font-weight: bold;">Accept</button>
+    <button icon="undo" kendoButton style="font-weight: bold;">Clear</button>
+  </div>
+</div>
+<div>
+  <div>
+    <div class="scanOptions">
+      <form class="k-form k-form-horizontal" [formGroup]="registerForm">
+        <legend class="k-form-legend">Scan Options</legend>
+        <kendo-formfield>
+          <kendo-label [for]="scanner" text="Scanner"></kendo-label>
+          <kendo-dropdownlist
+            formControlName="scanner"
+            #scanner
+            [data]="scannerList"
+            [textField]="'text'"
+            [valueField]="'value'"
+          >
+          </kendo-dropdownlist>
+        </kendo-formfield>
+        <kendo-formfield>
+          <kendo-label
+            [for]="documentCount"
+            text="Document Count"
+          ></kendo-label>
+          <input formControlName="documentCount" kendoTextBox #documentCount />
+        </kendo-formfield>
+        <kendo-formfield>
+          <kendo-label [for]="documentType" text="Document Type"></kendo-label>
+          <kendo-dropdownlist
+            formControlName="documentType"
+            #documentType
+            [data]="documentTypeList"
+            [textField]="'text'"
+            [valueField]="'value'"
+          >
+          </kendo-dropdownlist>
+        </kendo-formfield>
+        <kendo-formfield>
+          <kendo-label
+            [for]="registrationSource"
+            text="Registration Source"
+          ></kendo-label>
+          <kendo-dropdownlist
+            formControlName="registrationSource"
+            #registrationSource
+            [data]="registrationSourceList"
+            [textField]="'text'"
+            [valueField]="'value'"
+            width="250px"
+          >
+          </kendo-dropdownlist>
+        </kendo-formfield>
+        <kendo-formfield>
+          <div class="k-checkbox-wrap">
+            <input
+              #idProvided
+              type="checkbox"
+              formControlName="idProvided"
+              kendoCheckBox
+            />
+            <kendo-label
+              [for]="idProvided"
+              class="k-checkbox-label"
+              text="ID Provided"
+            ></kendo-label>
+          </div>
+        </kendo-formfield>
+        <kendo-formfield>
+          <div class="k-checkbox-wrap">
+            <input
+              #requestDateOverride
+              type="checkbox"
+              formControlName="requestDateOverride"
+              kendoCheckBox
+            />
+            <kendo-label
+              [for]="requestDateOverride"
+              class="k-checkbox-label"
+              text="Request Date Override"
+            ></kendo-label>
+          </div>
+        </kendo-formfield>
+        <kendo-formfield>
+          <kendo-label [for]="requestDate" text="Request Date"></kendo-label>
+          <kendo-datetimepicker
+            #requestDate
+            [formControlName]="'requestDate'"
+            [min]="min"
+            [max]="max"
+          >
+          </kendo-datetimepicker>
+        </kendo-formfield>
+        <kendo-formfield>
+          <kendo-label [for]="election" text="Election"></kendo-label>
+          <kendo-dropdownlist
+            formControlName="election"
+            #election
+            [data]="electionList"
+            [textField]="'text'"
+            [valueField]="'value'"
+          >
+          </kendo-dropdownlist>
+        </kendo-formfield>
+        <br />
+      </form>
+    </div>
+</div>

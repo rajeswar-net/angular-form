@@ -1,0 +1,29 @@
+// import the fonts
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro");
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.layout {
+  background: #f4f5f7 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.top {
+  height: 4em;
+  background: #F0F0F2 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
+}
+
+.header {
+  height: 4em;
+  background: #52a4f3 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
